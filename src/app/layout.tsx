@@ -16,7 +16,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className="header">
+          <h1>סגנונות תקשורת</h1>
+          <button className="menuBtn">אפשרויות</button>
+        </header>
+        <main className="main">
+          {children}
+        </main>
+        <footer className="footer">קרדיטים</footer>
+      </body>
     </html>
   );
 }
