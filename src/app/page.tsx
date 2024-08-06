@@ -6,7 +6,7 @@ export default function Home() {
     <section className={styles.section}>
       <h2 className={styles.title}>מודל ארבעת סגנונות התקשורת</h2>
       <p className={styles.paragraph}>הסבר קצר מה זה אומר</p>
-      <Link href="/four-styles">
+      <Link href="/questionaries">
         <button className={styles.btn}>התחל שאלון</button>
       </Link>
     </section>

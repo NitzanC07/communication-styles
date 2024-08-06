@@ -16,6 +16,7 @@
     border: 1px solid #000;
     border-radius: 10px;
     background-color: rgba(250, 235, 215, 0.2);
+    transition-duration: 0.8s;
     margin: 0;
   }
   .div:hover {

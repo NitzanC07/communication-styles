@@ -1,0 +1,98 @@
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 40%;
+}
+
+.choices:hover {
+  background-color: rgba(250, 235, 215, 0.7);
+}
+
+.slider {
+  margin: 0;
+  padding: 1px;
+  appearance: none;
+  width: 150px;
+  height: 27px;
+  border-radius: 15px;
+  background: #555;
+  box-shadow: 0 4px 10px #888;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.slider:hover {
+  opacity: 0.8;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(233, 203, 158);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.option1, .option2 {
+  font-size: 18px;
+  padding: 5px 0;
+}
+.option1 {
+  text-align: right;
+}
+.option2 {
+  text-align: left;
+}
+
+@media screen and (max-width: 1200px) {
+  .choices {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .choices {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .choices {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .choices {
+    width: 90%;
+  }
+  .option1, .option2 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .choices {
+    width: 100%;
+  }
+
+  .slider {
+    width: 80px;
+  }
+
+  .option1, .option2 {
+    font-size: 12px;
+  }
+}
