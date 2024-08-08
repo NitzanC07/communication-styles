@@ -2,24 +2,13 @@
   padding: 0.5rem;
 }
 .title {
-  margin: 0;
+  margin: 20px 5px;
   font-size: 20px;
   text-align: start;
 }
 
-.btn {
-  margin: 15px 0;
-  padding: 0.4rem 2rem;
-  background-color: rgb(222, 184, 135);
-  color: black;
-  border: 0;
-  border-radius: 0.5rem;
-  box-shadow: 3px 3px 5px gray;
-  transition-duration: 0.7s;
-  cursor: pointer;
+.paragraph {
+  margin: 20px 5px;
+  padding: 0;
 }
 
-.btn:hover {
-  box-shadow: 1px 1px 5px gray;
-  background-color: rgba(222, 184, 135, 0.7);
-}

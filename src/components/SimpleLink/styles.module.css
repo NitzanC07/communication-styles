@@ -1,0 +1,14 @@
+.link {
+    font-size: 1rem;
+    color: rgb(167, 135, 94);
+    /* background-color: rgb(250, 235, 215); */
+    margin: 0;
+    padding: 2px 0;
+    transition-duration: 2s;
+}
+
+.link:hover {
+    color: rgba(167, 135, 94, 0.7);
+    border-bottom: 1px dotted #000;
+    border-top: 1px dotted #000;
+}

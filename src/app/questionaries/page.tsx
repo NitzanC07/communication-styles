@@ -2,6 +2,7 @@
 import QuestionTwoOptions from "@/components/QuestionTwoOptions/QuestionTwoOptions";
 import styles from "./page.module.css";
 import { useState } from "react";
+import Button from "@/components/Button/Button";
 
 const questionaryA = [
   { queNumber: 1, option1: "שיטתי", option2: "אקראי" },
@@ -66,10 +67,9 @@ function QuestionaryModel() {
   };
   
   const saveResult = () => {
-
-    setResultA(result);
+    setResultA(result);    
   };
-
+  
   return (
     <form className={styles.questions}>
       <h2>שאלון ראשון</h2>
@@ -82,9 +82,7 @@ function QuestionaryModel() {
           onSelect={(index, value) => handleResponseUser(index, value)}
         />
       ))}
-      <button type="button" onClick={saveResult}>
-        סיום
-      </button>
+      <Button onClick={saveResult} text={"שלח"} />
       <span>תוצאת שאלון ראשון: {resultA}</span>
     </form>
   );
