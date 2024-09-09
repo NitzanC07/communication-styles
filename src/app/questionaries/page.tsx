@@ -50,29 +50,40 @@ function QuestionaryModel() {
       setCurrentResult(0);
       setReset(false);
     }, 0);
-    console.log(result);
   };
 
   return (
-    <form className={styles.questions}>
-      <h2>{currentQuestionary.subject}</h2>
-      {currentQuestionary.questions.map((question, index) => (
-        <QuestionTwoOptions
-          key={question.queNumber}
-          queNumber={question.queNumber}
-          option1={question.option1}
-          option2={question.option2}
-          onSelect={(index, value) => handleResponseUser(index, value)}
-          reset={reset}
-          setReset={() => setReset}
-        />
-      ))}
-      { 
-        currentQuestionary.subject !== "תוצאת השאלונים" ? 
-        <Button onClick={saveResult} text={"שמור תוצאה"} /> :
-        <Button onClick={nextStage} text={"הבא"} />
-      }
-    </form>
+    <>
+      <form className={styles.questions}>
+        <h2>{currentQuestionary.subject}</h2>
+        {currentQuestionary.questions.map((question, index) => (
+          <QuestionTwoOptions
+            key={question.queNumber}
+            queNumber={question.queNumber}
+            option1={question.option1}
+            option2={question.option2}
+            onSelect={(index, value) => handleResponseUser(index, value)}
+            reset={reset}
+            setReset={() => setReset}
+          />
+        ))}
+        {currentQuestionary.subject !== "תוצאת השאלונים" && (
+          <Button onClick={saveResult} text={"שמור תוצאה"} />
+        )}
+      </form>
+      {currentQuestionary.subject === "תוצאת השאלונים" && (
+        <>
+          <h3>ארבעה סגנונות תקשורת - רקע</h3>
+          <ul>
+            <li>משימתי</li>
+            <li>מקדם</li>
+            <li>מנתח</li>
+            <li>תומך</li>
+          </ul>
+          <Button onClick={nextStage} text={"הבא"} />
+        </>
+      )}
+    </>
   );
 }
 
