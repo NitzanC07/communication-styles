@@ -76,9 +76,9 @@ function QuestionaryModel() {
           <h3>ארבעה סגנונות תקשורת - רקע</h3>
           <ul>
             <li>משימתי</li>
-            <li>מקדם</li>
-            <li>מנתח</li>
             <li>תומך</li>
+            <li>מנתח</li>
+            <li>מקדם</li>
           </ul>
           <Button onClick={nextStage} text={"הבא"} />
         </>

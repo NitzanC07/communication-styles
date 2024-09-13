@@ -1,7 +1,127 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.chartBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  aspect-ratio: 1 / 1 ;
+  width: 100%;
+  height: 100%;
+}
+
+.quaters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.quater {
+  color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #00000025;
+}
+
+.chartBox {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 1fr 13fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.axisTitle {
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+
+#missionDriven {
+  grid-column: 1 / 4;
+  text-align: center;
+}
+
+#supporterDriven {
+  grid-column: 1 / 4;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+  .chartBackground, .chartBox {
+    width: 500px;
+    height: 500px;    
+  }
+  .quater {
+    font-size: 28px;
+  }
+  .axisTitle {
+    font-size: 14px;
+    margin: 2px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .chartBackground, .chartBox {
+    width: 450px;
+    height: 450px;    
+  }
+  .quater {
+    font-size: 28px;
+  }
+  .axisTitle {
+    font-size: 14px;
+    margin: 2px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .chartBackground, .chartBox {
+    width: 350px;
+    height: 350px;    
+  }
+  .quater {
+    font-size: 28px;
+  }
+  .axisTitle {
+    font-size: 14px;
+    margin: 2px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .chartBackground, .chartBox {
+    width: 250px;
+    height: 250px;    
+  }
+  .quater {
+    font-size: 22px;
+  }
+  .axisTitle {
+    font-size: 12px;
+    margin: 2px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .chartBackground, .chartBox {
+    width: 220px;
+    height: 220px;    
+  }
+  .quater {
+    font-size: 22px;
+  }
+  .axisTitle {
+    font-size: 12px;
+    margin: 2px;
+  }
 }
