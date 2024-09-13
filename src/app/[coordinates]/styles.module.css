@@ -15,9 +15,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  aspect-ratio: 1 / 1 ;
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
+  width: 600px;
+  justify-self: center;
 }
 
 .quaters {
@@ -39,12 +39,14 @@
 }
 
 .chartBox {
+  margin: 20px 0;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: 1fr 13fr 1fr;
   justify-content: center;
   align-items: center;
   gap: 2px;
+  aspect-ratio: 1 / 1;
 }
 
 .axisTitle {
@@ -63,11 +65,13 @@
   text-align: center;
 }
 
-
 @media screen and (max-width: 800px) {
-  .chartBackground, .chartBox {
+  .chartBackground {
     width: 500px;
-    height: 500px;    
+    height: 500px;
+  }
+  .chartBox {
+    width: 90%;    
   }
   .quater {
     font-size: 28px;
@@ -78,9 +82,9 @@
   }
 }
 @media screen and (max-width: 650px) {
-  .chartBackground, .chartBox {
+  .chartBackground {
     width: 450px;
-    height: 450px;    
+    height: 450px;
   }
   .quater {
     font-size: 28px;
@@ -91,9 +95,9 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .chartBackground, .chartBox {
+  .chartBackground {
     width: 350px;
-    height: 350px;    
+    height: 350px;
   }
   .quater {
     font-size: 28px;
@@ -104,9 +108,9 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .chartBackground, .chartBox {
+  .chartBackground {
     width: 250px;
-    height: 250px;    
+    height: 250px;
   }
   .quater {
     font-size: 22px;
@@ -117,9 +121,13 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .chartBackground, .chartBox {
+  .chartBackground {
     width: 220px;
-    height: 220px;    
+    height: 220px;
+  }
+  .chartBox {
+    width: 320px;
+    height: 280px;
   }
   .quater {
     font-size: 22px;

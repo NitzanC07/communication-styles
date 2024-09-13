@@ -22,8 +22,17 @@ function ChartPage({ params }: { params: { coordinates: string } }) {
     <section className={styles.container}>
       <h2>תוצאות</h2>
       <p className={styles.resultP}>
-        {Number(data[0].x) > 0 ? "מכוון משימות" : "מכוון אנשים"},{" "}
-        {Number(data[0].y) > 0 ? "דומיננטי" : "פאסיבי"}
+        {Number(data[0].x) > 0
+          ? "מכוון משימות"
+          : Number(data[0].x) < 0
+          ? "מכוון אנשים"
+          : "לפעמים מכוון אנשים, ולפעמים מכוון משימות."}
+        ,{" "}
+        {Number(data[0].y) > 0
+          ? "דומיננטי"
+          : Number(data[0].y) < 0
+          ? "פאסיבי"
+          : "לפעמים דומיננטי ולפעמים פאסיבי."}
       </p>
 
       <div className={styles.chartBox}>
@@ -52,8 +61,8 @@ function ChartPage({ params }: { params: { coordinates: string } }) {
               {/* <CartesianAxis strokeDasharray="2 5" /> */}
               <CartesianGrid
                 strokeDasharray="1 0"
-                verticalFill={["#00000010", "#00000005"]}
-                horizontalFill={["#00000005", "#00000010"]}
+                verticalFill={["#00000009", "#00000005"]}
+                horizontalFill={["#00000005", "#00000009"]}
               />
               <XAxis
                 type="number"
@@ -83,6 +92,8 @@ function ChartPage({ params }: { params: { coordinates: string } }) {
           פאסיבי
         </p>
       </div>
+
+      <p>מתחת לגרף</p>
     </section>
   );
 }
