@@ -16,15 +16,14 @@ import {
 
 function ChartPage({ params }: { params: { coordinates: string } }) {
   const currentUser = params.coordinates.split("xy");
-  const data = [
-    { x: currentUser[0], y: currentUser[1] },
-  ];
+  const data = [{ x: currentUser[0], y: currentUser[1] }];
 
   return (
     <section className={styles.container}>
       <h2>תוצאות</h2>
-      <p>
-        {Number(data[0].x) > 0 ? "מכוון משימות": "מכוון אנשים"}, {Number(data[0].y) > 0 ? "דומיננטי" : "פאסיבי"}
+      <p className={styles.resultP}>
+        {Number(data[0].x) > 0 ? "מכוון משימות" : "מכוון אנשים"},{" "}
+        {Number(data[0].y) > 0 ? "דומיננטי" : "פאסיבי"}
       </p>
 
       <div className={styles.chartBox}>

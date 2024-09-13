@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.resultP {
+  font-size: 20px;
+}
+
 .chartBackground {
   display: flex;
   justify-content: center;
